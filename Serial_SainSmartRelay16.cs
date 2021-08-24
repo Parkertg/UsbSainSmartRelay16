@@ -83,13 +83,13 @@ namespace Parkertg.SainSmart
 
             byte[] readMessage = null;
 
-            var asipMessageReceiveTimer = new System.Timers.Timer();
+            var MsgReceiveTimer = new System.Timers.Timer();
 
-            asipMessageReceiveTimer.Interval = timeout;
+            MsgReceiveTimer.Interval = timeout;
 
-            asipMessageReceiveTimer.Elapsed += (sender, args) => { timeoutFlag = true; };
+            MsgReceiveTimer.Elapsed += (sender, args) => { timeoutFlag = true; };
 
-            asipMessageReceiveTimer.Start();
+            MsgReceiveTimer.Start();
 
             while (readMessage == null)
             {
@@ -103,7 +103,7 @@ namespace Parkertg.SainSmart
                 }
             }
 
-            asipMessageReceiveTimer.Dispose();
+            MsgReceiveTimer.Dispose();
 
             return readMessage;
         }
