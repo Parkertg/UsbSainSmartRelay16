@@ -9,7 +9,7 @@ using System.IO.Ports;
 using System.Threading;
 using Common.Communication;
 
-namespace Parkertg.SainSmart
+namespace Tech.Gunderson.SainSmart
 {
 
     [DisplayName("Serial")]
